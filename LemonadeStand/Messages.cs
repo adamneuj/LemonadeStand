@@ -48,5 +48,11 @@ namespace LemonadeStand
             Console.WriteLine("What is your name, Entrepreneur?");
         }
 
+        public static void DisplayWeather()
+        {
+            Console.WriteLine("Temperature: " + Weather.temperature);
+            Console.WriteLine("Condition: " + Weather.condition);
+        }
+
     }
 }
