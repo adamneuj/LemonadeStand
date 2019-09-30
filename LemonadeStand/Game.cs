@@ -25,6 +25,8 @@ namespace LemonadeStand
         {
             Messages.DisplayRules();
             playerOne.NameYourPlayer();
+            Weather weather = new Weather();
+            Console.WriteLine(weather.temperature);
         }
 
         public void GamePlayLoop()

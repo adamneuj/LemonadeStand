@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         //member variables
         public string condition;
-        public int temprature;
+        public int temperature;
         public List<string> weatherConditions;
         public string predictedForecast;
 
@@ -18,8 +18,14 @@ namespace LemonadeStand
         public Weather()
         {
             weatherConditions = new List<string>() { "Sunny", "Partly Cloudy", "Cloudy", "Rain" };
+            RandomTemp();
         }
 
         //member methods
+        public void RandomTemp()
+        {
+            Random random = new Random();
+            temperature = random.Next(60, 101);
+        }
     }
 }
