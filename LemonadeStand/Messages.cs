@@ -31,7 +31,6 @@ namespace LemonadeStand
             Console.WriteLine("Good luck!");
             PressEnterToContinue();
         }
-
         public static void Congratulate()
         {
             Console.WriteLine("Congratulations, Entrepreneur!");
@@ -43,5 +42,11 @@ namespace LemonadeStand
             Console.ReadLine();
             Console.Clear();
         }
+        public static void AskName()
+        {
+            Console.WriteLine("It seems I forgot to ask to whom I am speaking.");
+            Console.WriteLine("What is your name, Entrepreneur?");
+        }
+
     }
 }

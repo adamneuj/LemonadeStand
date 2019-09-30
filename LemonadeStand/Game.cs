@@ -10,17 +10,21 @@ namespace LemonadeStand
     {
         //member variables
         public int gameLength;
+        public Player PlayerOne;
 
         //constructor
         public Game()
         {
             gameLength = 7;
+            PlayerOne = new Player();
         }
 
         //member methods
         public void RunGame()
         {
             Messages.DisplayRules();
+            PlayerOne.NameYourPlayer();
+
 
             //Display Rules !DONE!
             //Ask how long game will be played
