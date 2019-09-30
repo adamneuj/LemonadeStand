@@ -26,7 +26,7 @@ namespace LemonadeStand
             Messages.DisplayRules();
             playerOne.NameYourPlayer();
             Weather weather = new Weather();
-            Messages.DisplayWeather();
+            Messages.DisplayTodaysWeather();
             Messages.PressEnterToContinue();
         }
 

@@ -50,8 +50,14 @@ namespace LemonadeStand
 
         public static void DisplayWeather()
         {
-            Console.WriteLine("Temperature: " + Weather.temperature);
             Console.WriteLine("Condition: " + Weather.condition);
+            Console.WriteLine("Temperature: " + Weather.temperature);
+        }
+
+        public static void DisplayTodaysWeather()
+        {
+            Console.WriteLine("Today's weather will be:");
+            DisplayWeather();
         }
 
     }
