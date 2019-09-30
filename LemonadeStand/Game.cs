@@ -9,20 +9,20 @@ namespace LemonadeStand
     class Game
     {
         //member variables
+        public int gameLength;
 
         //constructor
         public Game()
         {
-
+            gameLength = 7;
         }
 
         //member methods
         public void RunGame()
         {
-            Console.WriteLine("Welcome to the game!");
-            Console.ReadLine();
+            Messages.DisplayRules();
 
-            //Display Rules
+            //Display Rules !DONE!
             //Ask how long game will be played
             //Start gameplay loop checking if there are days left in gamelength.
                 //Display weather forecast for day
