@@ -52,5 +52,14 @@ namespace LemonadeStand
 
         }
 
+        public void GamePlayLoop()
+        {
+            while(gameLength != 0)
+            {
+
+                gameLength--;
+            }
+        }
+
     }
 }

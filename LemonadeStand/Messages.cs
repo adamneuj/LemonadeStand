@@ -22,7 +22,7 @@ namespace LemonadeStand
             Console.WriteLine("How refreshing your lemonade will be is one of the greatest factors.");
             Console.WriteLine("Nobody will want to buy your product unless it's refreshing.");
             Console.WriteLine("Your recipe per cup determines how refreshing it will be.");
-            Console.WriteLine("You will need to determine how many lemons, and sugar cubes will be in each pitcher.");
+            Console.WriteLine("You will need to determine how many lemons, and cups of sugar will be in each pitcher.");
             Console.WriteLine("You will then need to determine how many ice cubes are in each cup.");
             Console.WriteLine("Remember, what the weather is like and how many ice cubes will determine how refreshing a cup of lemonade is as well.");
             Console.WriteLine("Also, another determining factor of your business is the time of day and the day of the week.");
