@@ -8,5 +8,9 @@ namespace LemonadeStand
 {
     class IceCube : Item
     {
+        public IceCube()
+        {
+            count = 0;
+        }
     }
 }

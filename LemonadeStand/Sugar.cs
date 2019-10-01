@@ -8,5 +8,9 @@ namespace LemonadeStand
 {
     class Sugar : Item
     {
+        public Sugar()
+        {
+            count = 0;
+        }
     }
 }
