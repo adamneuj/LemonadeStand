@@ -11,8 +11,6 @@ namespace LemonadeStand
         //member variables
         public static string condition;
         public static int temperature;
-        public static string tomorrowsCondition;
-        public static int tomorrowsTemperature;
         public List<string> weatherConditions;
 
         //constructor

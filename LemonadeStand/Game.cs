@@ -17,7 +17,7 @@ namespace LemonadeStand
         {
             gameLength = 7;
             playerOne = new Player();
-            string[] daysOfTheWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
         }
 
         //member methods
@@ -25,7 +25,7 @@ namespace LemonadeStand
         {
             Messages.DisplayRules();
             playerOne.NameYourPlayer();
-            Weather weather = new Weather();
+            Day day = new Day();
             Messages.DisplayTodaysWeather();
             Messages.PressEnterToContinue();
         }

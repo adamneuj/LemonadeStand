@@ -16,7 +16,7 @@ namespace LemonadeStand
             //Display Rules !DONE!
             //Ask how long game will be played !DONE!
             //Start gameplay loop checking if there are days left in gamelength. !DONE!
-                //Display weather forecast for day
+                //Display weather forecast for day !DONE!
                 //Display weather forecast for week
                 //Buy inventory for lemonade stand - lemons, sugar, ice cubes and cups.
                 //Remove money from player wallet for supplies.
