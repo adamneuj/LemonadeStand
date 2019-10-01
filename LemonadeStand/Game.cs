@@ -12,12 +12,12 @@ namespace LemonadeStand
         public int gameLength;
         public Player playerOne;
 
+
         //constructor
         public Game()
         {
             gameLength = 7;
             playerOne = new Player();
-
         }
 
         //member methods
@@ -27,6 +27,7 @@ namespace LemonadeStand
             playerOne.NameYourPlayer();
             Weather weather = new Weather();
             Day day = new Day();
+            GamePlayLoop();
             Messages.PressEnterToContinue();
         }
 
@@ -34,7 +35,7 @@ namespace LemonadeStand
         {
             while(gameLength != 0)
             {
-
+                Messages.DisplayDay();
                 gameLength--;
             }
         }

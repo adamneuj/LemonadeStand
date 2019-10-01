@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Inventory
+    class Store
     {
-        //member methods
-        public List<Lemon> lemons;
+        //member variables
 
         //constructor
-        public Inventory()
-        {
-            lemons = new List<Lemon>();
-        }
 
-        //member variables
+        //member methods
+        public void AddLemons()
+        {
+            
+        }
     }
 }

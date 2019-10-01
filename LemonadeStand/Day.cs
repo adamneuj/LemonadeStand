@@ -16,7 +16,6 @@ namespace LemonadeStand
         //constructor
         public Day()
         {
-
             i = 0;
             day = daysOfTheWeek[i];
         }

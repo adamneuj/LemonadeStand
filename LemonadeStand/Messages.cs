@@ -56,13 +56,14 @@ namespace LemonadeStand
 
         public static void DisplayTodaysWeather()
         {
-            Console.WriteLine("Today's weather will be:");
+            Console.WriteLine("Today's weather will be...");
             DisplayWeather();
         }
 
         public static void DisplayDay()
         {
             Console.WriteLine("Today is " + Day.day);
+            DisplayTodaysWeather();
         }
     }
 }
