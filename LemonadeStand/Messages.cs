@@ -60,5 +60,9 @@ namespace LemonadeStand
             DisplayWeather();
         }
 
+        public static void DisplayDay()
+        {
+            Console.WriteLine("Today is " + Day.day);
+        }
     }
 }

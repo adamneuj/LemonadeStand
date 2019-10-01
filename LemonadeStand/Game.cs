@@ -25,8 +25,8 @@ namespace LemonadeStand
         {
             Messages.DisplayRules();
             playerOne.NameYourPlayer();
+            Weather weather = new Weather();
             Day day = new Day();
-            Messages.DisplayTodaysWeather();
             Messages.PressEnterToContinue();
         }
 

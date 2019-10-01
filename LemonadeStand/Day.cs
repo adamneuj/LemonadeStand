@@ -11,20 +11,20 @@ namespace LemonadeStand
         //member variables
         int i;
         string[] daysOfTheWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-        public string day;
+        public static string day;
 
         //constructor
         public Day()
         {
-            Weather weather = new Weather();
+
             i = 0;
             day = daysOfTheWeek[i];
         }
 
         //member methods
-        public string DetermineDay()
+        public string CycleDay()
         {
-            if (i > 6)
+            if (i == 6)
             {
                 i = 0;
                 day = daysOfTheWeek[i];
