@@ -23,9 +23,9 @@ namespace LemonadeStand
                 //Player will determine REFRESHING FACTOR how many lemons, sugar, and ice cubes are in each cup.
                 //Player will determine how much each cup will cost.
 
-            //Real weather generated for day loop
-                //Temperature
-                //Weather conditions
+            //Real weather generated for day loop!DONE!
+                //Temperature !DONE!
+                //Weather conditions !DONE!
                 //Calculate new forecast based on weather conditions of day.
 
             //Start day loop, checking if there is inventory left and if there is time left in day.

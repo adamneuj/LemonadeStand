@@ -9,13 +9,17 @@ namespace LemonadeStand
     class Store
     {
         //member variables
+        int i;
 
         //constructor
-
+        public Store()
+        {
+            i = 0;
+        }
         //member methods
         public void AddLemons()
         {
-            
+            Lemon lemon = new Lemon();
         }
     }
 }

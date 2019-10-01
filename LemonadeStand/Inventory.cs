@@ -22,7 +22,6 @@ namespace LemonadeStand
             iceCubes = new List<IceCube>();
             cups = new List<Cup>();
         }
-
         //member variables
     }
 }

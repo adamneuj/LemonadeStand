@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    abstract class Item
+    class Wallet
     {
-        public string name;
+        double wallet;
+
+        public Wallet()
+        {
+            wallet = 10;
+        }
     }
 }

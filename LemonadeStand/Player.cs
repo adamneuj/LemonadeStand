@@ -10,12 +10,12 @@ namespace LemonadeStand
     {
         //member variables
         public string name;
-        public int wallet;
 
         //constructor
         public Player()
         {
             Inventory inventory = new Inventory();
+            Wallet wallet = new Wallet();
         }
 
         //member methods

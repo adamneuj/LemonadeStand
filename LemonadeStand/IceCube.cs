@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         public IceCube()
         {
-            count = 0;
+
         }
     }
 }

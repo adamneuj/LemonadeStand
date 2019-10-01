@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         public Sugar()
         {
-            count = 0;
+
         }
     }
 }
