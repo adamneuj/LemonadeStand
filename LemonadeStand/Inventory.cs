@@ -10,15 +10,20 @@ namespace LemonadeStand
     {
         //member methods
         public List<Lemon> lemons;
-        public List<Sugar> cupsOfSugar;
+        public List<Sugar> Sugar;
         public List<IceCube> iceCubes;
         public List<Cup> cups;
+
+        public int numberOfLemons;
+        public int cupsOfSugar;
+        public int numberOfIceCubes;
+        public int numberOfCups;
 
         //constructor
         public Inventory()
         {
             lemons = new List<Lemon>();
-            cupsOfSugar = new List<Sugar>();
+            Sugar = new List<Sugar>();
             iceCubes = new List<IceCube>();
             cups = new List<Cup>();
         }

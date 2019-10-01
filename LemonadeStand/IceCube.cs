@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         public IceCube()
         {
-
+            price = .02;
         }
     }
 }
