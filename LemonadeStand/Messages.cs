@@ -83,6 +83,11 @@ namespace LemonadeStand
             Console.WriteLine("The price per ice cube is $ " + iceCube.price);
         }
 
+        public static void DisplayCupPrice(Cup cup)
+        {
+            Console.WriteLine("The price per ice cube is $ " + cup.price);
+        }
+
         public static void ShowInventory(Player player)
         {
             Console.Clear();
