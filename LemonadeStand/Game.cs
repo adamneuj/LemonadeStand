@@ -27,7 +27,8 @@ namespace LemonadeStand
             playerOne.NameYourPlayer();
             Weather weather = new Weather();
             Day day = new Day();
-            GamePlayLoop();
+            Store store = new Store();
+            store.DisplayStore();
             Messages.PressEnterToContinue();
         }
 

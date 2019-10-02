@@ -9,17 +9,39 @@ namespace LemonadeStand
     class Store
     {
         //member variables
-        int i;
+        int multiplier;
+        string storeInput;
 
         //constructor
         public Store()
         {
-            i = 0;
+            
         }
         //member methods
-        public void AddLemons()
+        public void DisplayStore()
         {
-            Lemon lemon = new Lemon();
+            Console.WriteLine("Would you like to buy lemons, sugar, ice cubes, or cups?");
+            storeInput = Console.ReadLine();
+            storeInput = storeInput.ToLower();
+            if (storeInput == "lemons")
+            {
+                Console.WriteLine("How many lemons would you like to buy?");
+                storeInput = Console.ReadLine();
+                if (Int32.TryParse(storeInput, out multiplier))
+                {
+                    Console.WriteLine("Multiplier value: " + multiplier);
+                    while (multiplier != 0)
+                    {
+                        Lemon lemon = new Lemon();
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Didn't work.");
+                }
+            }
         }
+
     }
 }

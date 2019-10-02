@@ -28,5 +28,6 @@ namespace LemonadeStand
             cups = new List<Cup>();
         }
         //member variables
+
     }
 }

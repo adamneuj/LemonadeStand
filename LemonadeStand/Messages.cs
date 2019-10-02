@@ -65,9 +65,5 @@ namespace LemonadeStand
             Console.WriteLine("Today is " + Day.day);
             DisplayTodaysWeather();
         }
-        public static void DisplayStoreInterface()
-        {
-
-        }
     }
 }
