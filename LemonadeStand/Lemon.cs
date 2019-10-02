@@ -13,12 +13,6 @@ namespace LemonadeStand
             name = "lemon";
             price = .25;
         }
-        public double Price
-        {
-            get
-            {
-                return price;
-            }
-        }
+
     }
 }

@@ -50,8 +50,8 @@ namespace LemonadeStand
 
         public static void DisplayWeather(Weather weather)
         {
-            Console.WriteLine("Condition: " + weather.condition);
             Console.WriteLine("Temperature: " + weather.temperature);
+            Console.WriteLine("Condition: " + weather.condition);
         }
 
         public static void DisplayTodaysWeather(Weather weather)
@@ -71,7 +71,7 @@ namespace LemonadeStand
         }
         public static void DisplayLemonPrice(Lemon lemon)
         {
-            Console.WriteLine("The price per lemon is $" + lemon.Price);
+            Console.WriteLine("The price per lemon is $" + lemon.price);
         }
 
         public static void ShowInventory(Player player)
