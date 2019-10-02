@@ -12,6 +12,7 @@ namespace LemonadeStand
         int multiplier;
         string storeInput;
         Lemon lemon;
+        Sugar sugar;
 
         //constructor
         public Store()
@@ -19,6 +20,7 @@ namespace LemonadeStand
             multiplier = 0;
             storeInput = null;
             lemon = new Lemon();
+            sugar = new Sugar();
         }
         //member methods
         public Player BuyFromStore(Player player)
@@ -29,6 +31,11 @@ namespace LemonadeStand
             if (storeInput == "lemons")
             {
                 BuyLemons(player);
+                return player;
+            }
+            else if(storeInput == "sugar")
+            {
+                BuySugar(player);
                 return player;
             }
             else
@@ -70,9 +77,50 @@ namespace LemonadeStand
             }
         }
 
+        public Player BuySugar(Player player)
+        {
+            Messages.DisplaySugarPrice(sugar);
+            Console.WriteLine("How many cups of sugar would you like to buy?");
+            storeInput = Console.ReadLine();
+            if (Int32.TryParse(storeInput, out multiplier))
+            {
+                if (sugar.price * multiplier < player.wallet.money)
+                {
+                    while (multiplier != 0)
+                    {
+                        player.inventory.sugar.Add(new Sugar());
+                        PurchaseSugar(player);
+                        multiplier--;
+                    }
+                    storeInput = null;
+                    return player;
+                }
+                else
+                {
+                    Console.WriteLine("Not enough money.");
+                    return BuyFromStore(player);
+                }
+            }
+            else
+            {
+                Messages.DisplayInvalidInput();
+                storeInput = null;
+                Console.Clear();
+                return BuyFromStore(player);
+            }
+        }
+
         public Player PurchaseLemon(Player player)
         {
             player.wallet.money -= lemon.price;
+            player.wallet.money = Math.Round(player.wallet.money, 2);
+            return player;
+        }
+
+        public Player PurchaseSugar(Player player)
+        {
+            player.wallet.money -= sugar.price;
+            player.wallet.money = Math.Round(player.wallet.money, 2);
             return player;
         }
 

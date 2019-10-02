@@ -74,6 +74,11 @@ namespace LemonadeStand
             Console.WriteLine("The price per lemon is $" + lemon.price);
         }
 
+        public static void DisplaySugarPrice(Sugar sugar)
+        {
+            Console.WriteLine("The price per cup of sugar is $ " + sugar.price);
+        }
+
         public static void ShowInventory(Player player)
         {
             Console.Clear();
@@ -84,10 +89,6 @@ namespace LemonadeStand
             Console.WriteLine("Cup: " + player.inventory.cups.Count());
             Console.WriteLine("Money: $" + player.wallet.money);
             PressEnterToContinue();
-        }
-        public static void VisitStore()
-        {
-
         }
     }
 }
