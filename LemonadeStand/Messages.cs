@@ -69,5 +69,9 @@ namespace LemonadeStand
         {
             Console.WriteLine("Invalid input.");
         }
+
+        public static void DisplayLemonPrice()
+        {
+        }
     }
 }

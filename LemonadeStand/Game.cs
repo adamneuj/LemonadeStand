@@ -28,7 +28,7 @@ namespace LemonadeStand
             Weather weather = new Weather();
             Day day = new Day();
             Store store = new Store(); //DELETE ONCE FUNCTIONALITY IS COMPLETE
-            store.DisplayStore(); // DELETE ONCE FUNCTIONALITY IS COMPLETE
+            store.EnterStore(playerOne); //DELETE ONCE FUNCTIONALITY IS COMPLETE
             Messages.PressEnterToContinue();
         }
 

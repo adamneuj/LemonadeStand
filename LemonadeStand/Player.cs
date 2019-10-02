@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         //member variables
         public string name;
-        Inventory inventory;
+        public Inventory inventory;
         Wallet wallet;
 
         //constructor

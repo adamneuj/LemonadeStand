@@ -14,11 +14,6 @@ namespace LemonadeStand
         public List<IceCube> iceCubes;
         public List<Cup> cups;
 
-        public int numberOfLemons;
-        public int cupsOfSugar;
-        public int numberOfIceCubes;
-        public int numberOfCups;
-
         //constructor
         public Inventory()
         {

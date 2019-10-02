@@ -11,15 +11,15 @@ namespace LemonadeStand
         //member variables
         int multiplier;
         string storeInput;
-        Game playerOne;
 
         //constructor
         public Store()
         {
-            
+            multiplier = 0;
+            storeInput = null;
         }
         //member methods
-        public void DisplayStore()
+        public void EnterStore(Player player)
         {
             Console.WriteLine("Would you like to buy lemons, sugar, ice cubes, or cups?");
             storeInput = Console.ReadLine();
@@ -30,17 +30,18 @@ namespace LemonadeStand
                 storeInput = Console.ReadLine();
                 if (Int32.TryParse(storeInput, out multiplier))
                 {
-                    Console.WriteLine("Multiplier value: " + multiplier);
                     while (multiplier != 0)
                     {
-                        Lemon lemon = new Lemon();
+                        player.inventory.lemons.Add(new Lemon());
+                        multiplier--;
                     }
-
+                    Console.WriteLine(player.inventory.lemons.Count());
                 }
                 else
                 {
                     Messages.DisplayInvalidInput();
-                    DisplayStore();
+                    storeInput = null;
+                    EnterStore(player);
                 }
             }
         }
