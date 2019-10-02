@@ -11,6 +11,7 @@ namespace LemonadeStand
         //member variables
         int multiplier;
         string storeInput;
+        Game playerOne;
 
         //constructor
         public Store()
@@ -38,7 +39,8 @@ namespace LemonadeStand
                 }
                 else
                 {
-                    Console.WriteLine("Didn't work.");
+                    Messages.DisplayInvalidInput();
+                    DisplayStore();
                 }
             }
         }
