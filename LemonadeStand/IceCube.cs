@@ -13,5 +13,13 @@ namespace LemonadeStand
             name = "ice cube";
             price = .02;
         }
+        public double Price
+        {
+            get
+            {
+                return price;
+            }
+        }
+
     }
 }
