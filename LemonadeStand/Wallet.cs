@@ -8,19 +8,11 @@ namespace LemonadeStand
 {
     class Wallet
     {
-        double money;
+        public double money;
 
         public Wallet()
         {
             money = 10;
-        }
-
-        public double Money
-        {
-            get
-            {
-                return money;
-            }
         }
     }
 }

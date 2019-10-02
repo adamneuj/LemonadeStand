@@ -21,33 +21,15 @@ namespace LemonadeStand
             lemon = new Lemon();
         }
         //member methods
-        public Player EnterStore(Player player)
+        public Player BuyFromStore(Player player)
         {
             Console.WriteLine("Would you like to buy lemons, sugar, ice cubes, or cups?");
             storeInput = Console.ReadLine();
             storeInput = storeInput.ToLower();
             if (storeInput == "lemons")
             {
-                Messages.DisplayLemonPrice(lemon);
-                Console.WriteLine("How many lemons would you like to buy?");
-                storeInput = Console.ReadLine();
-                if (Int32.TryParse(storeInput, out multiplier))
-                {
-                    while (multiplier != 0)
-                    {
-                        player.inventory.lemons.Add(new Lemon());
-                        multiplier--;
-                    }
-                    storeInput = null;
-                    return player;
-                }
-                else
-                {
-                    Messages.DisplayInvalidInput();
-                    storeInput = null;
-                    Console.Clear();
-                    return EnterStore(player);
-                }
+                BuyLemons(player);
+                return player;
             }
             else
             {
@@ -55,6 +37,44 @@ namespace LemonadeStand
             }
         }
 
+        public Player BuyLemons(Player player)
+        {
+            Messages.DisplayLemonPrice(lemon);
+            Console.WriteLine("How many lemons would you like to buy?");
+            storeInput = Console.ReadLine();
+            if (Int32.TryParse(storeInput, out multiplier))
+            {
+                if (lemon.price * multiplier < player.wallet.money)
+                {
+                    while (multiplier != 0)
+                    {
+                        player.inventory.lemons.Add(new Lemon());
+                        PurchaseLemon(player);
+                        multiplier--;
+                    }
+                    storeInput = null;
+                    return player;
+                }
+                else
+                {
+                    Console.WriteLine("Not enough money.");
+                    return BuyFromStore(player);
+                }
+            }
+            else
+            {
+                Messages.DisplayInvalidInput();
+                storeInput = null;
+                Console.Clear();
+                return BuyFromStore(player);
+            }
+        }
+
+        public Player PurchaseLemon(Player player)
+        {
+            player.wallet.money -= lemon.price;
+            return player;
+        }
 
     }
 }

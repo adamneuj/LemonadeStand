@@ -82,7 +82,12 @@ namespace LemonadeStand
             Console.WriteLine("Sugar: " + player.inventory.sugar.Count());
             Console.WriteLine("Ice Cubes: " + player.inventory.iceCubes.Count());
             Console.WriteLine("Cup: " + player.inventory.cups.Count());
+            Console.WriteLine("Money: $" + player.wallet.money);
             PressEnterToContinue();
+        }
+        public static void VisitStore()
+        {
+
         }
     }
 }

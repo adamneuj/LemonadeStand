@@ -17,7 +17,6 @@ namespace LemonadeStand
         public Weather()
         {
             weatherConditions = new List<string>() { "Sunny", "Partly Cloudy", "Cloudy", "Rain" };
-            GenerateWeather();
         }
 
         //member methods
