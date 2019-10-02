@@ -41,7 +41,8 @@ namespace LemonadeStand
             }
             else
             {
-                return RandomTemp();
+                temperature = 100;
+                return temperature;
             }
         }
         string RandomCondition()

@@ -13,6 +13,7 @@ namespace LemonadeStand
         string storeInput;
         Lemon lemon;
         Sugar sugar;
+        IceCube iceCube;
 
         //constructor
         public Store()
@@ -21,6 +22,7 @@ namespace LemonadeStand
             storeInput = null;
             lemon = new Lemon();
             sugar = new Sugar();
+            iceCube = new IceCube();
         }
         //member methods
         public Player BuyFromStore(Player player)
@@ -36,6 +38,11 @@ namespace LemonadeStand
             else if(storeInput == "sugar")
             {
                 BuySugar(player);
+                return player;
+            }
+            else if(storeInput == "ice" || storeInput == "ice cubes")
+            {
+                BuyIce(player);
                 return player;
             }
             else
@@ -110,6 +117,39 @@ namespace LemonadeStand
             }
         }
 
+        public Player BuyIce(Player player)
+        {
+            Messages.DisplayIcePrice(iceCube);
+            Console.WriteLine("How many ice cubes would you like to buy?");
+            storeInput = Console.ReadLine();
+            if (Int32.TryParse(storeInput, out multiplier))
+            {
+                if (iceCube.price * multiplier < player.wallet.money)
+                {
+                    while (multiplier != 0)
+                    {
+                        player.inventory.iceCubes.Add(new IceCube());
+                        PurchaseIce(player);
+                        multiplier--;
+                    }
+                    storeInput = null;
+                    return player;
+                }
+                else
+                {
+                    Console.WriteLine("Not enough money.");
+                    return BuyFromStore(player);
+                }
+            }
+            else
+            {
+                Messages.DisplayInvalidInput();
+                storeInput = null;
+                Console.Clear();
+                return BuyFromStore(player);
+            }
+        }
+
         public Player PurchaseLemon(Player player)
         {
             player.wallet.money -= lemon.price;
@@ -120,6 +160,13 @@ namespace LemonadeStand
         public Player PurchaseSugar(Player player)
         {
             player.wallet.money -= sugar.price;
+            player.wallet.money = Math.Round(player.wallet.money, 2);
+            return player;
+        }
+
+        public Player PurchaseIce(Player player)
+        {
+            player.wallet.money -= iceCube.price;
             player.wallet.money = Math.Round(player.wallet.money, 2);
             return player;
         }
