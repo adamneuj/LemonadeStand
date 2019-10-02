@@ -28,16 +28,17 @@ namespace LemonadeStand
             Weather weather = new Weather();
             Day day = new Day();
             Store store = new Store();
-            store.EnterStore(playerOne);
-            Messages.ShowInventory(playerOne);
+            GamePlayLoop(day, weather, store);
             Messages.PressEnterToContinue();
         }
 
-        public void GamePlayLoop()
+        public void GamePlayLoop(Day day, Weather weather, Store store)
         {
             while(gameLength != 0)
             {
-                Messages.DisplayDay();
+                Messages.DisplayDay(day, weather);
+                store.EnterStore(playerOne);
+                Messages.ShowInventory(playerOne);
                 gameLength--;
             }
         }

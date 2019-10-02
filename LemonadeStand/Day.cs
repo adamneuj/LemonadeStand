@@ -11,7 +11,7 @@ namespace LemonadeStand
         //member variables
         int i;
         string[] daysOfTheWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-        public static string day;
+        public string day;
 
         //constructor
         public Day()

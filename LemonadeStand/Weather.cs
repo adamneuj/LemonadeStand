@@ -9,8 +9,8 @@ namespace LemonadeStand
     class Weather
     {
         //member variables
-        public static string condition;
-        public static int temperature;
+        public string condition;
+        public int temperature;
         public List<string> weatherConditions;
 
         //constructor

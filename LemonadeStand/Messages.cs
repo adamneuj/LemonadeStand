@@ -48,22 +48,22 @@ namespace LemonadeStand
             Console.WriteLine("What is your name, Entrepreneur?");
         }
 
-        public static void DisplayWeather()
+        public static void DisplayWeather(Weather weather)
         {
-            Console.WriteLine("Condition: " + Weather.condition);
-            Console.WriteLine("Temperature: " + Weather.temperature);
+            Console.WriteLine("Condition: " + weather.condition);
+            Console.WriteLine("Temperature: " + weather.temperature);
         }
 
-        public static void DisplayTodaysWeather()
+        public static void DisplayTodaysWeather(Weather weather)
         {
             Console.WriteLine("Today's weather will be...");
-            DisplayWeather();
+            DisplayWeather(weather);
         }
 
-        public static void DisplayDay()
+        public static void DisplayDay(Day day, Weather weather)
         {
-            Console.WriteLine("Today is " + Day.day);
-            DisplayTodaysWeather();
+            Console.WriteLine("Today is " + day.day);
+            DisplayTodaysWeather(weather);
         }
         public static void DisplayInvalidInput()
         {
