@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    public class Messages
+    class Messages
     {
         public static void DisplayRules()
         {
@@ -68,6 +68,21 @@ namespace LemonadeStand
         public static void DisplayInvalidInput()
         {
             Console.WriteLine("Invalid input.");
+        }
+        public static void DisplayLemonPrice(Lemon lemon)
+        {
+            Console.WriteLine("The price per lemon is $" + lemon.Price);
+        }
+
+        public static void ShowInventory(Player player)
+        {
+            Console.Clear();
+            Console.WriteLine("Inventory");
+            Console.WriteLine("Lemons: " + player.inventory.lemons.Count());
+            Console.WriteLine("Sugar: " + player.inventory.sugar.Count());
+            Console.WriteLine("Ice Cubes: " + player.inventory.iceCubes.Count());
+            Console.WriteLine("Cup: " + player.inventory.cups.Count());
+            PressEnterToContinue();
         }
     }
 }
