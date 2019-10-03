@@ -16,7 +16,7 @@ namespace LemonadeStand
         //constructor
         public Game()
         {
-            gameLength = 7;
+            gameLength = 1;
             playerOne = new Player();
         }
 

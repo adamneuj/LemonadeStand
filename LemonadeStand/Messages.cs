@@ -8,6 +8,10 @@ namespace LemonadeStand
 {
     class Messages
     {
+        public static void ClearConsole()
+        {
+            Console.Clear();
+        }
 
         public static void DisplayRules()
         {
@@ -69,6 +73,7 @@ namespace LemonadeStand
         public static void DisplayInvalidInput()
         {
             Console.WriteLine("Invalid input.");
+            PressEnterToContinue();
         }
         public static void DisplayLemonPrice(Lemon lemon)
         {
@@ -114,6 +119,13 @@ namespace LemonadeStand
             Console.WriteLine("Press 2 to go to the store.");
             Console.WriteLine("Press 3 to set your recipe for the day.");
             Console.WriteLine("Press 4 to open for the day.");
+        }
+
+        public static void DisplayStoreMenu()
+        {
+            Console.WriteLine("Welcome to the store!");
+            Console.WriteLine("Press 1 to buy supplies");
+            Console.WriteLine("Press 2 to leave store.");
         }
 
     }

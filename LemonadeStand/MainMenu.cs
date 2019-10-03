@@ -18,11 +18,13 @@ namespace LemonadeStand
             {
                 menuInput = null;
                 Messages.ShowInventory(player);
+                CallMenu(day, weather, player, store);
             }
             else if (menuInput == "2")
             {
                 menuInput = null;
-                store.BuyFromStore(player);
+                store.EnterStore(player);
+                CallMenu(day, weather, player, store);
             }
             else if (menuInput == "3")
             {

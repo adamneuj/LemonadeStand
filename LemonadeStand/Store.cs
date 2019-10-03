@@ -27,6 +27,29 @@ namespace LemonadeStand
             cup = new Cup();
         }
         //member methods
+        public Player EnterStore(Player player)
+        {
+            Messages.ClearConsole();
+            Messages.DisplayStoreMenu();
+            storeInput = Console.ReadLine();
+            if(storeInput == "1")
+            {
+                storeInput = null;
+                Messages.ClearConsole();
+                return BuyFromStore(player);
+            }
+            else if(storeInput == "2")
+            {
+                storeInput = null;
+                Messages.ClearConsole();
+                return player;
+            }
+            else
+            {
+                Messages.DisplayInvalidInput();
+                return EnterStore(player);
+            }
+        }
         public Player BuyFromStore(Player player)
         {
             Console.WriteLine("Would you like to buy lemons, sugar, ice cubes, or cups?");
