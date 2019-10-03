@@ -8,5 +8,11 @@ namespace LemonadeStand
 {
     class Pitcher
     {
+        public int cupsPerPitcher;
+
+        public Pitcher()
+        {
+            cupsPerPitcher = 4;
+        }
     }
 }

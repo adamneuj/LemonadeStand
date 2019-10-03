@@ -28,7 +28,9 @@ namespace LemonadeStand
             }
             else if (menuInput == "3")
             {
-                //TO DO - SET RECIPE
+                Recipe recipe = new Recipe();
+                recipe.CreateRecipe(player);
+                CallMenu(day, weather, player, store);
             }
             else if (menuInput == "4")
             {
