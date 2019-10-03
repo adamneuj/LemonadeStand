@@ -29,18 +29,19 @@ namespace LemonadeStand
             Day day = new Day();
             Store store = new Store();
             weather.GenerateWeather();
-            GamePlayLoop(day, weather, store);
+            GamePlayLoop(day, weather, playerOne, store);
             Messages.PressEnterToContinue();
         }
 
-        public void GamePlayLoop(Day day, Weather weather, Store store)
+        public void GamePlayLoop(Day day, Weather weather, Player player, Store store)
         {
             while(gameLength != 0)
             {
-                Messages.DisplayDay(day, weather);
-                CheckInventory(playerOne, store);
+                MainMenu.CallMenu(day, weather, player, store);
+                //Messages.DisplayDay(day, weather);
+                //CheckInventory(playerOne, store);
                 //store.BuyFromStore(playerOne);
-                Messages.ShowInventory(playerOne);
+                //Messages.ShowInventory(playerOne);
                 gameLength--;
             }
         }

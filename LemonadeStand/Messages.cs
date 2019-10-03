@@ -105,16 +105,15 @@ namespace LemonadeStand
             PressEnterToContinue();
         }
 
-        public static void DisplayMainMenu(Weather weather)
+        public static void DisplayMainMenu(Day day, Weather weather)
         {
-            DisplayWeather(weather);
+            DisplayDay(day, weather);
             Console.WriteLine();
             Console.WriteLine("What would you like to do before you open for the day?");
             Console.WriteLine("Press 1 to view inventory.");
             Console.WriteLine("Press 2 to go to the store.");
             Console.WriteLine("Press 3 to set your recipe for the day.");
             Console.WriteLine("Press 4 to open for the day.");
-
         }
 
     }
