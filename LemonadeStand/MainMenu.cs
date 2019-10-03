@@ -9,6 +9,7 @@ namespace LemonadeStand
     class MainMenu
     {
         public static string menuInput;
+        
 
         public static void CallMenu(Day day, Weather weather, Player player, Store store)
         {
@@ -29,7 +30,6 @@ namespace LemonadeStand
             else if (menuInput == "3")
             {
                 Recipe recipe = new Recipe();
-                recipe.CreateRecipe(day, weather, player, store);
                 CallMenu(day, weather, player, store);
             }
             else if (menuInput == "4")

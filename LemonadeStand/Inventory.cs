@@ -13,6 +13,7 @@ namespace LemonadeStand
         public List<Sugar> sugar;
         public List<IceCube> iceCubes;
         public List<Cup> cups;
+        public List<Pitcher> pitchers;
 
         //constructor
         public Inventory()
@@ -21,6 +22,7 @@ namespace LemonadeStand
             sugar = new List<Sugar>();
             iceCubes = new List<IceCube>();
             cups = new List<Cup>();
+            pitchers = new List<Pitcher>();
         }
         //member variables
 
