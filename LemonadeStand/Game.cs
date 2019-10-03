@@ -38,9 +38,42 @@ namespace LemonadeStand
             while(gameLength != 0)
             {
                 Messages.DisplayDay(day, weather);
-                store.BuyFromStore(playerOne);
+                CheckInventory(playerOne, store);
+                //store.BuyFromStore(playerOne);
                 Messages.ShowInventory(playerOne);
                 gameLength--;
+            }
+        }
+
+        public Player CheckInventory(Player player, Store store)
+        {
+            if(player.inventory.lemons.Count == 0)
+            {
+                Messages.DisplayNeedToGoToStore();
+                Messages.ShowInventory(player);
+                return store.BuyFromStore(player);
+            }
+            else if(player.inventory.sugar.Count == 0)
+            {
+                Messages.DisplayNeedToGoToStore();
+                Messages.ShowInventory(player);
+                return store.BuyFromStore(player);
+            }
+            else if(player.inventory.iceCubes.Count == 0)
+            {
+                Messages.DisplayNeedToGoToStore();
+                Messages.ShowInventory(player);
+                return store.BuyFromStore(player);
+            }
+            else if(player.inventory.cups.Count == 0)
+            {
+                Messages.DisplayNeedToGoToStore();
+                Messages.ShowInventory(player);
+                return store.BuyFromStore(player);
+            }
+            else
+            {
+                return player;
             }
         }
 

@@ -8,6 +8,7 @@ namespace LemonadeStand
 {
     class Messages
     {
+
         public static void DisplayRules()
         {
             Congratulate();
@@ -87,17 +88,34 @@ namespace LemonadeStand
         {
             Console.WriteLine("The price per ice cube is $ " + cup.price);
         }
-
         public static void ShowInventory(Player player)
         {
             Console.Clear();
             Console.WriteLine("Inventory");
             Console.WriteLine("Lemons: " + player.inventory.lemons.Count());
-            Console.WriteLine("Sugar: " + player.inventory.sugar.Count());
+            Console.WriteLine("Cups of Sugar: " + player.inventory.sugar.Count());
             Console.WriteLine("Ice Cubes: " + player.inventory.iceCubes.Count());
-            Console.WriteLine("Cup: " + player.inventory.cups.Count());
+            Console.WriteLine("Cups: " + player.inventory.cups.Count());
             Console.WriteLine("Money: $" + player.wallet.money);
             PressEnterToContinue();
         }
+        public static void DisplayNeedToGoToStore()
+        {
+            Console.WriteLine("You will need to go to the store for more supplies.");
+            PressEnterToContinue();
+        }
+
+        public static void DisplayMainMenu(Weather weather)
+        {
+            DisplayWeather(weather);
+            Console.WriteLine();
+            Console.WriteLine("What would you like to do before you open for the day?");
+            Console.WriteLine("Press 1 to view inventory.");
+            Console.WriteLine("Press 2 to go to the store.");
+            Console.WriteLine("Press 3 to set your recipe for the day.");
+            Console.WriteLine("Press 4 to open for the day.");
+
+        }
+
     }
 }

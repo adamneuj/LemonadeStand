@@ -25,6 +25,7 @@ namespace LemonadeStand
         {
             Messages.AskName();
             name = Console.ReadLine();
+            Console.Clear();
         }
     }
 }
