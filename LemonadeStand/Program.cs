@@ -18,8 +18,8 @@ namespace LemonadeStand
             //Start gameplay loop checking if there are days left in gamelength. !DONE!
                 //Display weather forecast for day !DONE!
                 //Display weather forecast for week
-                //Buy inventory for lemonade stand - lemons, sugar, ice cubes and cups.
-                //Remove money from player wallet for supplies.
+                //Buy inventory for lemonade stand - lemons, sugar, ice cubes and cups. !DONE!
+                //Remove money from player wallet for supplies. !DONE!
                 //Player will determine REFRESHING FACTOR how many lemons, sugar, and ice cubes are in each cup.
                 //Player will determine how much each cup will cost.
 
