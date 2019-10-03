@@ -72,7 +72,6 @@ namespace LemonadeStand
             }
             else if(storeInput == "cups" || storeInput == "cup")
             {
-
                 BuyCups(player);
                 return player;
             }

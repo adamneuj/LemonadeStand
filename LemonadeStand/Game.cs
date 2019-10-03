@@ -46,37 +46,7 @@ namespace LemonadeStand
             }
         }
 
-        public Player CheckInventory(Player player, Store store)
-        {
-            if(player.inventory.lemons.Count == 0)
-            {
-                Messages.DisplayNeedToGoToStore();
-                Messages.ShowInventory(player);
-                return store.BuyFromStore(player);
-            }
-            else if(player.inventory.sugar.Count == 0)
-            {
-                Messages.DisplayNeedToGoToStore();
-                Messages.ShowInventory(player);
-                return store.BuyFromStore(player);
-            }
-            else if(player.inventory.iceCubes.Count == 0)
-            {
-                Messages.DisplayNeedToGoToStore();
-                Messages.ShowInventory(player);
-                return store.BuyFromStore(player);
-            }
-            else if(player.inventory.cups.Count == 0)
-            {
-                Messages.DisplayNeedToGoToStore();
-                Messages.ShowInventory(player);
-                return store.BuyFromStore(player);
-            }
-            else
-            {
-                return player;
-            }
-        }
+
 
     }
 }

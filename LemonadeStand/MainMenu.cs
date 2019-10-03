@@ -29,7 +29,7 @@ namespace LemonadeStand
             else if (menuInput == "3")
             {
                 Recipe recipe = new Recipe();
-                recipe.CreateRecipe(player);
+                recipe.CreateRecipe(day, weather, player, store);
                 CallMenu(day, weather, player, store);
             }
             else if (menuInput == "4")
@@ -43,5 +43,8 @@ namespace LemonadeStand
                 CallMenu(day, weather, player, store);
             }
         }
+
+
+
     }
 }
