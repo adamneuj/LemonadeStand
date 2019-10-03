@@ -35,7 +35,7 @@ namespace LemonadeStand
             {
                 return temperature = randomTemp.Next(60, 76);
             }
-            else if(condition == "Rainy")
+            else if(condition == "Rain")
             {
                 return temperature = randomTemp.Next(50, 66);
             }

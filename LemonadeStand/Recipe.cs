@@ -19,8 +19,6 @@ namespace LemonadeStand
         //constructor
         public Recipe()
         {
-            Messages.ClearConsole();
-            Messages.DisplayInventory();
             AddPitchers();
             AddLemons();
             AddSugar();

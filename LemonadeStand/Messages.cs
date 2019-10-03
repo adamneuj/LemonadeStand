@@ -102,7 +102,6 @@ namespace LemonadeStand
             Console.WriteLine("Ice Cubes: " + player.inventory.iceCubes.Count());
             Console.WriteLine("Cups: " + player.inventory.cups.Count());
             Console.WriteLine("Money: $" + player.wallet.money);
-            PressEnterToContinue();
         }
         public static void DisplayNeedToGoToStore()
         {
@@ -117,8 +116,7 @@ namespace LemonadeStand
             Console.WriteLine("What would you like to do before you open for the day?");
             Console.WriteLine("Press 1 to view inventory.");
             Console.WriteLine("Press 2 to go to the store.");
-            Console.WriteLine("Press 3 to set your recipe for the day.");
-            Console.WriteLine("Press 4 to open for the day.");
+            Console.WriteLine("Press 3 to set up and open for the day.");
         }
 
         public static void DisplayStoreMenu()

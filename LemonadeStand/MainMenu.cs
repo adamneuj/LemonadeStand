@@ -17,18 +17,19 @@ namespace LemonadeStand
             menuInput = Console.ReadLine();
             if (menuInput == "1")
             {
-                menuInput = null;
                 Messages.ShowInventory(player);
+                Messages.PressEnterToContinue();
                 CallMenu(day, weather, player, store);
             }
             else if (menuInput == "2")
             {
-                menuInput = null;
                 store.EnterStore(player);
                 CallMenu(day, weather, player, store);
             }
             else if (menuInput == "3")
             {
+                Messages.ShowInventory(player);
+                Console.WriteLine();
                 Recipe recipe = new Recipe();
                 CallMenu(day, weather, player, store);
             }

@@ -38,10 +38,6 @@ namespace LemonadeStand
             while(gameLength != 0)
             {
                 MainMenu.CallMenu(day, weather, player, store);
-                //Messages.DisplayDay(day, weather);
-                //CheckInventory(playerOne, store);
-                //store.BuyFromStore(playerOne);
-                //Messages.ShowInventory(playerOne);
                 gameLength--;
             }
         }
