@@ -114,37 +114,5 @@ namespace LemonadeStand
             }
             return player;
         }
-        //void CheckInventory(Day day, Weather weather, Player player, Store store)
-        //{
-        //    if (player.inventory.lemons.Count < amountOfLemons)
-        //    {
-        //        Messages.DisplayNeedToGoToStore();
-        //        amountOfLemons = 0;
-        //        MainMenu.CallMenu(day, weather, player, store);
-        //    }
-        //    else if (player.inventory.sugar.Count < amountOfSugar)
-        //    {
-        //        Messages.DisplayNeedToGoToStore();
-        //        amountOfLemons = 0;
-        //        amountOfSugar = 0;
-        //        MainMenu.CallMenu(day, weather, player, store);
-        //    }
-        //    else if (player.inventory.iceCubes.Count < amountOfIceCubes)
-        //    {
-        //        Messages.DisplayNeedToGoToStore();
-        //        amountOfLemons = 0;
-        //        amountOfSugar = 0;
-        //        amountOfIceCubes = 0;
-        //        MainMenu.CallMenu(day, weather, player, store);
-        //    }
-        //    else if (player.inventory.cups.Count == 0)
-        //    {
-        //        amountOfLemons = 0;
-        //        amountOfSugar = 0;
-        //        amountOfIceCubes = 0;
-        //        Messages.DisplayNeedToGoToStore();
-        //        MainMenu.CallMenu(day, weather, player, store);
-        //    }
-        //}
     }
 }

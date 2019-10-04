@@ -13,7 +13,7 @@ namespace LemonadeStand
         //constructor
         public LemonadeStand()
         {
-            pitchers = new List<Pitcher>;
+            pitchers = new List<Pitcher>();
         }
         //member methods
 

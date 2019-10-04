@@ -37,6 +37,8 @@ namespace LemonadeStand
                     player.lemonadeStand.pitchers.Add(new Pitcher(recipe));
                     recipe.amountOfPitchers--;
                 }
+                Console.WriteLine("Pitchers for lemonade stand: " + player.lemonadeStand.pitchers.Count());
+                Messages.PressEnterToContinue();
                 CallMenu(day, weather, player, store);
             }
             else
