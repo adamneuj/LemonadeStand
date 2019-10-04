@@ -103,13 +103,13 @@ namespace LemonadeStand
             int counter = amountOfLemons * amountOfPitchers;
             while(counter != 0)
             {
-                player.inventory.lemons.RemoveAt(0);
+                player.inventory.lemons.RemoveAt(player.inventory.lemons.Count -1);
                 counter--;
             }
             counter = amountOfSugar * amountOfPitchers;
             while (counter != 0)
             {
-                player.inventory.sugar.RemoveAt(0);
+                player.inventory.sugar.RemoveAt(player.inventory.sugar.Count -1);
                 counter--;
             }
             return player;

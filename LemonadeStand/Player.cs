@@ -12,12 +12,14 @@ namespace LemonadeStand
         public string name;
         public Inventory inventory;
         public Wallet wallet;
+        public LemonadeStand lemonadeStand;
 
         //constructor
         public Player()
         {
             inventory = new Inventory();
             wallet = new Wallet();
+            lemonadeStand = new LemonadeStand();
         }
 
         //member methods

@@ -13,7 +13,6 @@ namespace LemonadeStand
         public List<Sugar> sugar;
         public List<IceCube> iceCubes;
         public List<Cup> cups;
-        public List<Pitcher> pitchers;
 
         //constructor
         public Inventory()

@@ -34,7 +34,7 @@ namespace LemonadeStand
                 recipe.RemoveItemsFromInventory(player);
                 while (recipe.amountOfPitchers != 0)
                 {
-                    player.inventory.pitchers.Add(new Pitcher(recipe));
+                    player.lemonadeStand.pitchers.Add(new Pitcher(recipe));
                     recipe.amountOfPitchers--;
                 }
                 CallMenu(day, weather, player, store);
