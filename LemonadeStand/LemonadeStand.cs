@@ -12,11 +12,13 @@ namespace LemonadeStand
         public double pricePerCup;
         public List<Pitcher> pitchers;
         public int footTraffic;
+        public List<Customer> passerbys;
         //constructor
 
         public LemonadeStand()
         {
             pitchers = new List<Pitcher>();
+            passerbys = new List<Customer>;
         }
 
         //member methods
