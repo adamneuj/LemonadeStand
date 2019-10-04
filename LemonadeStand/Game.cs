@@ -41,8 +41,5 @@ namespace LemonadeStand
                 gameLength--;
             }
         }
-
-
-
     }
 }

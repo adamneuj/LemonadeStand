@@ -20,8 +20,8 @@ namespace LemonadeStand
         public Recipe()
         {
             AddPitchers();
-            AddLemons();
-            AddSugar();
+            AddLemonsToRecipe();
+            AddSugarToRecipe();
             AddIceCubesPerCup();
             DeterminePricePerCup();
         }
@@ -41,7 +41,7 @@ namespace LemonadeStand
                 return AddPitchers();
             }
         }
-        int AddLemons()
+        int AddLemonsToRecipe()
         {
             Console.WriteLine("How many lemons per pitcher?");
             recipeString = Console.ReadLine();
@@ -52,11 +52,11 @@ namespace LemonadeStand
             else
             {
                 Messages.DisplayInvalidInput();
-                return AddLemons();
+                return AddLemonsToRecipe();
             }
         }
 
-        int AddSugar()
+        int AddSugarToRecipe()
         {
             Console.WriteLine("How many cups of sugar per pitcher?");
             recipeString = Console.ReadLine();
@@ -67,7 +67,7 @@ namespace LemonadeStand
             else
             {
                 Messages.DisplayInvalidInput();
-                return AddSugar();
+                return AddSugarToRecipe();
             }
         }
         int AddIceCubesPerCup()
@@ -97,6 +97,22 @@ namespace LemonadeStand
                 Messages.DisplayInvalidInput();
                 return DeterminePricePerCup();
             }
+        }
+        public Player RemoveItemsFromInventory(Player player)
+        {
+            int counter = amountOfLemons * amountOfPitchers;
+            while(counter != 0)
+            {
+                player.inventory.lemons.RemoveAt(0);
+                counter--;
+            }
+            counter = amountOfSugar * amountOfPitchers;
+            while (counter != 0)
+            {
+                player.inventory.sugar.RemoveAt(0);
+                counter--;
+            }
+            return player;
         }
         //void CheckInventory(Day day, Weather weather, Player player, Store store)
         //{

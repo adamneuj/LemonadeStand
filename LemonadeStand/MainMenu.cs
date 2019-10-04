@@ -31,6 +31,7 @@ namespace LemonadeStand
                 Messages.ShowInventory(player);
                 Console.WriteLine();
                 Recipe recipe = new Recipe();
+                recipe.RemoveItemsFromInventory(player);
                 while (recipe.amountOfPitchers != 0)
                 {
                     player.inventory.pitchers.Add(new Pitcher(recipe));
@@ -45,8 +46,6 @@ namespace LemonadeStand
                 CallMenu(day, weather, player, store);
             }
         }
-
-
 
     }
 }
