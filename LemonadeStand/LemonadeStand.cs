@@ -24,22 +24,21 @@ namespace LemonadeStand
         //member methods
         public int GenerateFootTraffic(Weather weather)
         {
-            Random random = new Random();
             if(weather.condition == "Sunny")
             {
-                return footTraffic = random.Next(80, 101);
+                return footTraffic = RandomGenerator.GetRandomInt(80, 101);
             }
             else if(weather.condition == "Partly Cloudy")
             {
-                return footTraffic = random.Next(60, 101);
+                return footTraffic = RandomGenerator.GetRandomInt(60, 101);
             }
             else if(weather.condition == "Cloudy")
             {
-                return footTraffic = random.Next(40, 71);
+                return footTraffic = RandomGenerator.GetRandomInt(40, 71);
             }
             else
             {
-                return footTraffic = random.Next(5, 31);
+                return footTraffic = RandomGenerator.GetRandomInt(5, 31);
             }
         }
 

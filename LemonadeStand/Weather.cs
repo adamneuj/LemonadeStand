@@ -22,22 +22,21 @@ namespace LemonadeStand
         //member methods
         int RandomTemp()
         {
-            Random randomTemp = new Random();
             if (condition == "Sunny")
             {
-                return temperature = randomTemp.Next(70, 101);
+                return temperature = RandomGenerator.GetRandomInt(70, 101);
             }
             else if(condition == "Partly Cloudy")
             {
-                return temperature = randomTemp.Next(70, 91);
+                return temperature = RandomGenerator.GetRandomInt(70, 91);
             }
             else if(condition == "Cloudy")
             {
-                return temperature = randomTemp.Next(60, 76);
+                return temperature = RandomGenerator.GetRandomInt(60, 76);
             }
             else if(condition == "Rain")
             {
-                return temperature = randomTemp.Next(50, 66);
+                return temperature = RandomGenerator.GetRandomInt(50, 66);
             }
             else
             {
@@ -47,8 +46,7 @@ namespace LemonadeStand
         }
         string RandomCondition()
         {
-            Random randomCondition = new Random();
-            int i = randomCondition.Next(0, 4);
+            int i = RandomGenerator.GetRandomInt(0, 4);
             return condition = weatherConditions[i];
         }
         public void GenerateWeather()

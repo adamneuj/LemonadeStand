@@ -11,6 +11,9 @@ namespace LemonadeStand
         //member variables
         public int gameLength;
         public Player playerOne;
+        public Weather weather;
+        public Day day;
+        public Store store;
 
 
         //constructor
@@ -18,6 +21,9 @@ namespace LemonadeStand
         {
             gameLength = 1;
             playerOne = new Player();
+            weather = new Weather();
+            day = new Day();
+            store = new Store();
         }
 
         //member methods
@@ -25,10 +31,6 @@ namespace LemonadeStand
         {
             Messages.DisplayRules();
             playerOne.NameYourPlayer();
-            Weather weather = new Weather();
-            Day day = new Day();
-            Store store = new Store();
-            weather.GenerateWeather();
             GamePlayLoop(day, weather, playerOne, store);
             Messages.PressEnterToContinue();
         }
@@ -37,14 +39,19 @@ namespace LemonadeStand
         {
             while(gameLength != 0)
             {
+                weather.GenerateWeather();
                 Messages.DisplayDay(day, weather);
                 //MainMenu.CallMenu(day, weather, player, store);
-                playerOne.lemonadeStand.GenerateFootTraffic(weather);
-                playerOne.lemonadeStand.GeneratePasserbys(weather);
+                GenerateTraffic(weather, player);
                 Console.WriteLine("Number of passerbys: " + playerOne.lemonadeStand.passerbys.Count());
                 Console.WriteLine();
                 gameLength--;
             }
+        }
+        public void GenerateTraffic(Weather weather, Player player)
+        {
+            player.lemonadeStand.GenerateFootTraffic(weather);
+            player.lemonadeStand.GeneratePasserbys(weather);
         }
     }
 }
