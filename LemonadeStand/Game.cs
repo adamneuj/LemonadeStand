@@ -43,8 +43,7 @@ namespace LemonadeStand
                 Messages.DisplayDay(day, weather);
                 //MainMenu.CallMenu(day, weather, player, store);
                 GenerateTraffic(weather, player);
-                Console.WriteLine("Customer money: " + player.lemonadeStand.passerbys[0].money);
-                Console.WriteLine();
+                Console.WriteLine(player.lemonadeStand.passerbys.Count());
                 gameLength--;
             }
         }

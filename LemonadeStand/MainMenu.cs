@@ -37,6 +37,7 @@ namespace LemonadeStand
                     player.lemonadeStand.pitchers.Add(new Pitcher(recipe));
                     recipe.amountOfPitchers--;
                 }
+                player.lemonadeStand.pricePerCup = recipe.pricePerCup;
             }
             else
             {
