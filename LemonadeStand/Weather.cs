@@ -25,7 +25,7 @@ namespace LemonadeStand
             Random randomTemp = new Random();
             if (condition == "Sunny")
             {
-                return temperature = randomTemp.Next(80, 101);
+                return temperature = randomTemp.Next(60, 101);
             }
             else if(condition == "Partly Cloudy")
             {

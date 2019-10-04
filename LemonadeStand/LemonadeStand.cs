@@ -9,6 +9,7 @@ namespace LemonadeStand
     class LemonadeStand
     {
         //member variables
+        public double pricePerCup;
         public List<Pitcher> pitchers;
         //constructor
         public LemonadeStand()
