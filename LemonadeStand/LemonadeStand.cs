@@ -18,7 +18,7 @@ namespace LemonadeStand
         public LemonadeStand()
         {
             pitchers = new List<Pitcher>();
-            passerbys = new List<Customer>;
+            passerbys = new List<Customer>();
         }
 
         //member methods
@@ -43,5 +43,13 @@ namespace LemonadeStand
             }
         }
 
+        public List<Customer> GeneratePasserbys(Weather weather)
+        {
+            while(footTraffic != 0)
+            {
+                passerbys.Add(new Customer(weather));
+            }
+            return passerbys;
+        }
     }
 }
