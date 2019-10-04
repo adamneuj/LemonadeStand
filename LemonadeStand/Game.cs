@@ -37,7 +37,12 @@ namespace LemonadeStand
         {
             while(gameLength != 0)
             {
-                MainMenu.CallMenu(day, weather, player, store);
+                Messages.DisplayDay(day, weather);
+                //MainMenu.CallMenu(day, weather, player, store);
+                playerOne.lemonadeStand.GenerateFootTraffic(weather);
+                playerOne.lemonadeStand.GeneratePasserbys(weather);
+                Console.WriteLine("Number of passerbys: " + playerOne.lemonadeStand.passerbys.Count());
+                Console.WriteLine();
                 gameLength--;
             }
         }

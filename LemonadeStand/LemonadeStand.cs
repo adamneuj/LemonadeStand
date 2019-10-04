@@ -48,6 +48,7 @@ namespace LemonadeStand
             while(footTraffic != 0)
             {
                 passerbys.Add(new Customer(weather));
+                footTraffic--;
             }
             return passerbys;
         }
