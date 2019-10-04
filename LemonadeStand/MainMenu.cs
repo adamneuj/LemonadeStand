@@ -31,11 +31,12 @@ namespace LemonadeStand
                 Messages.ShowInventory(player);
                 Console.WriteLine();
                 Recipe recipe = new Recipe();
+                while (recipe.amountOfPitchers != 0)
+                {
+                    player.inventory.pitchers.Add(new Pitcher(recipe));
+                    recipe.amountOfPitchers--;
+                }
                 CallMenu(day, weather, player, store);
-            }
-            else if (menuInput == "4")
-            {
-                //TO DO - START BUSINESS DAY
             }
             else
             {
