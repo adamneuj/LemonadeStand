@@ -50,6 +50,7 @@
     <Compile Include="Inventory.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Lemon.cs" />
+    <Compile Include="LemonadeStand.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Messages.cs" />
     <Compile Include="Pitcher.cs" />
