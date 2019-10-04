@@ -20,24 +20,24 @@ namespace LemonadeStand
             CalculateDemand(weather);
         }
 
-        public void CalculateDemand(Weather weather)
+        public int CalculateDemand(Weather weather)
         {
             Random random = new Random(); // Demand is calculated as 1 = not interested, 2 = neutral, 3 = very interested
             if (weather.temperature >= 90)
             {
-                demand = 3;
+                return demand = 3;
             }
             else if(weather.temperature < 90 && weather.temperature >= 80)
             {
-                demand = random.Next(2, 4);
+                return demand = random.Next(2, 4);
             }
-            else if(weather.temperature < 80 && weather.temperature >= 65)
+            else if(weather.temperature < 80 && weather.temperature >= 60)
             {
-                demand = random.Next(1, 4);
+                return demand = random.Next(1, 4);
             }
             else
             {
-                demand = 1;
+                return demand = 1;
             }
         }
 

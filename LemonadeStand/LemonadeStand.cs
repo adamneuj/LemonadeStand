@@ -11,12 +11,35 @@ namespace LemonadeStand
         //member variables
         public double pricePerCup;
         public List<Pitcher> pitchers;
+        public int footTraffic;
         //constructor
+
         public LemonadeStand()
         {
             pitchers = new List<Pitcher>();
         }
+
         //member methods
+        public int GenerateFootTraffic(Weather weather)
+        {
+            Random random = new Random();
+            if(weather.condition == "Sunny")
+            {
+                return footTraffic = random.Next(80, 101);
+            }
+            else if(weather.condition == "Partly Cloudy")
+            {
+                return footTraffic = random.Next(60, 101);
+            }
+            else if(weather.condition == "Cloudy")
+            {
+                return footTraffic = random.Next(40, 71);
+            }
+            else
+            {
+                return footTraffic = random.Next(5, 31);
+            }
+        }
 
     }
 }
