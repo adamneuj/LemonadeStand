@@ -17,7 +17,7 @@ namespace LemonadeStand
         public static int GetRandomInt(int minimum, int maximum) //Single Responsibility Principle
         {
             Random random = new Random();
-            return random.Next(minimum, maximum + 1);
+            return random.Next(minimum, maximum);
         }
     }
 }
