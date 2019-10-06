@@ -101,17 +101,9 @@ namespace LemonadeStand
         public Player RemoveItemsFromInventory(Player player)
         {
             int counter = amountOfLemons * amountOfPitchers;
-            while(counter != 0)
-            {
-                player.inventory.lemons.RemoveAt(player.inventory.lemons.Count -1);
-                counter--;
-            }
+            player.inventory.lemons.RemoveRange(0, counter);
             counter = amountOfSugar * amountOfPitchers;
-            while (counter != 0)
-            {
-                player.inventory.sugar.RemoveAt(player.inventory.sugar.Count -1);
-                counter--;
-            }
+            player.inventory.sugar.RemoveRange(0, counter);
             return player;
         }
     }

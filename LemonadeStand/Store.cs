@@ -52,6 +52,8 @@ namespace LemonadeStand
         }
         public Player BuyFromStore(Player player)
         {
+            Messages.ShowInventory(player);
+            Console.WriteLine();
             Console.WriteLine("Would you like to buy lemons, sugar, ice cubes, or cups?");
             storeInput = Console.ReadLine();
             storeInput = storeInput.ToLower();

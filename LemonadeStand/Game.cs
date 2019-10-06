@@ -19,7 +19,7 @@ namespace LemonadeStand
         //constructor
         public Game()
         {
-            gameLength = 1;
+            gameLength = 7;
             playerOne = new Player();
             weather = new Weather();
             day = new Day();
@@ -40,10 +40,9 @@ namespace LemonadeStand
             while(gameLength != 0)
             {
                 weather.GenerateWeather();
-                Messages.DisplayDay(day, weather);
-                //MainMenu.CallMenu(day, weather, player, store);
+                MainMenu.CallMenu(day, weather, player, store);
                 GenerateTraffic(weather, player);
-                Console.WriteLine(player.lemonadeStand.passerbys.Count());
+                Console.WriteLine("Lemons left in inventory: " + player.inventory.lemons.Count());
                 gameLength--;
             }
         }
