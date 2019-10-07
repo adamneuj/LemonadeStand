@@ -57,7 +57,7 @@ namespace LemonadeStand
 
         double GenerateMoney()
         {
-            money = RandomGenerator.GetRandomDouble(0.1, 1.21);
+            money = RandomGenerator.GetRandomDouble(0.25, 3.01);
             money = Math.Round(money, 2);
             return money;
         }
