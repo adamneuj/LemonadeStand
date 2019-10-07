@@ -42,7 +42,8 @@ namespace LemonadeStand
                 weather.GenerateWeather();
                 MainMenu.CallMenu(day, weather, player, store);
                 GenerateTraffic(weather, player);
-                Console.WriteLine("Lemons left in inventory: " + player.inventory.lemons.Count());
+                player.lemonadeStand.ServeCustomers(player);
+                Console.Clear();
                 gameLength--;
             }
         }

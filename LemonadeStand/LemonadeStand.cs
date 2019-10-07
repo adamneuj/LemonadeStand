@@ -61,14 +61,14 @@ namespace LemonadeStand
                     player.wallet.money += profit;
                     return player;
                 }
-                else if (passerbys[i].demand >= 2 && passerbys[i].sourThreshold >= pitchers[-1].sourFactor && passerbys[i].sweetThreshold >= pitchers[-1].sweetFactor && passerbys[i].money >= pricePerCup)
+                else if (passerbys[i].demand >= 2 && passerbys[i].sourThreshold >= pitchers[0].sourFactor && passerbys[i].sweetThreshold >= pitchers[0].sweetFactor && passerbys[i].money >= pricePerCup)
                 {
                     passerbys[i].money -= pricePerCup;
                     profit += pricePerCup;
-                    pitchers[-1].cupsPerPitcher--;
-                    if(pitchers[-1].cupsPerPitcher == 0)
+                    pitchers[0].cupsPerPitcher--;
+                    if(pitchers[0].cupsPerPitcher == 0)
                     {
-                        pitchers.RemoveAt(-1);
+                        pitchers.RemoveAt(0);
                         continue;
                     }
                     else
@@ -81,6 +81,10 @@ namespace LemonadeStand
                     continue;
                 }
             }
+            pitchers.RemoveRange(0, pitchers.Count());
+            player.wallet.money += profit;
+            Console.WriteLine("Profits today: " + profit); // remove
+            Console.ReadLine();
             return player;
         }
     }
