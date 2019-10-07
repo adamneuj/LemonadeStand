@@ -39,7 +39,7 @@ namespace LemonadeStand
             }
             else
             {
-                return demand = 1;
+                return demand = RandomGenerator.GetRandomInt(1, 3);
             }
         }
 
