@@ -135,7 +135,6 @@ namespace LemonadeStand
             ShowInventory(player);
             Console.WriteLine("Profits for today: " + player.lemonadeStand.profit);
             Console.WriteLine("Cups of lemonade sold: " + player.lemonadeStand.cupsSold);
-            Console.WriteLine("Number of people that passed your stand: " + player.lemonadeStand.footTraffic);
             PressEnterToContinue();
         }
     }

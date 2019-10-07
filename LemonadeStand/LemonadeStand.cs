@@ -55,6 +55,8 @@ namespace LemonadeStand
         }
         public Player ServeCustomers(Player player)
         {
+            profit = 0;
+            footTraffic = 0;
             for(int i = 0; i < passerbys.Count(); i++)
             {
                 if (pitchers.Count() == 0)
@@ -66,6 +68,7 @@ namespace LemonadeStand
                 {
                     passerbys[i].money -= pricePerCup;
                     profit += pricePerCup;
+                    player.inventory.cups.RemoveAt(0);
                     pitchers[0].cupsPerPitcher--;
                     cupsSold++;
                     footTraffic++;
