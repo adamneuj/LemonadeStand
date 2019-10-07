@@ -44,6 +44,7 @@ namespace LemonadeStand
                 GenerateTraffic(weather, player);
                 player.lemonadeStand.ServeCustomers(player);
                 Console.Clear();
+                day.CycleDay();
                 gameLength--;
             }
         }

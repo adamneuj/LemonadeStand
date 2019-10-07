@@ -13,20 +13,14 @@ namespace LemonadeStand
 
         public static void CallMenu(Day day, Weather weather, Player player, Store store)
         {
-            Messages.DisplayMainMenu(day, weather);
+            Messages.DisplayMainMenu(day, weather, player);
             menuInput = Console.ReadLine();
             if (menuInput == "1")
             {
-                Messages.ShowInventory(player);
-                Messages.PressEnterToContinue();
+                store.BuyFromStore(player);
                 CallMenu(day, weather, player, store);
             }
             else if (menuInput == "2")
-            {
-                store.EnterStore(player);
-                CallMenu(day, weather, player, store);
-            }
-            else if (menuInput == "3")
             {
                 Messages.ShowInventory(player);
                 Console.WriteLine();
@@ -46,6 +40,5 @@ namespace LemonadeStand
                 CallMenu(day, weather, player, store);
             }
         }
-
     }
 }

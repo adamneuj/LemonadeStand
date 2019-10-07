@@ -16,24 +16,21 @@ namespace LemonadeStand
         public static void DisplayRules()
         {
             Congratulate();
-            Console.WriteLine("You have just opened your first business, a lemonade stand!");
-            Console.WriteLine("You might be thinking that this is a terrible first business.");
-            Console.WriteLine("There are low profit margins and nobody buys lemonade anymore.");
-            Console.WriteLine("Let me assure you, that this is incorrect.");
-            Console.WriteLine("If you play your cards right, then you can make an amazing net profit off of this.");
-            Console.WriteLine("Now you might be thinking, 'How do you even make a good profit off of this?'");
-            Console.WriteLine("Well, it's simple supply and demand.");
-            Console.WriteLine("What your potential customer will buy is determined by a variety of factors.");
-            Console.WriteLine("How refreshing your lemonade will be is one of the greatest factors.");
-            Console.WriteLine("Nobody will want to buy your product unless it's refreshing.");
-            Console.WriteLine("Your recipe per cup determines how refreshing it will be.");
-            Console.WriteLine("You will need to determine how many lemons, and cups of sugar will be in each pitcher.");
-            Console.WriteLine("You will then need to determine how many ice cubes are in each cup.");
-            Console.WriteLine("Remember, what the weather is like and how many ice cubes will determine how refreshing a cup of lemonade is as well.");
-            Console.WriteLine("Also, another determining factor of your business is the time of day and the day of the week.");
-            Console.WriteLine("You will have more traffic when people are not at work.");
-            Console.WriteLine("Now that you have the basic gist of it, go get that paper!");
-            Console.WriteLine("Good luck!");
+            Console.WriteLine("You have just opened your first business, a lemonade stand!\n" +
+                "You might be thinking that this is a terrible first business\n" +
+                "There are low profit margins and nobody buys lemonade anymore.\n" +
+                "Let me assure you, that this is incorrect.\n" +
+                "If you play your cards right, then you can make an amazing net profit off of this.\n" +
+                "Now you might be thinking, 'How do you even make a good profit off of this?'\n" +
+                "Well, it's simple supply and demand.\n" +
+                "What your potential customer will buy is determined by a variety of factors.\n" +
+                "How refreshing your lemonade will be one of the greatest factors.\n" +
+                "Nobody will want to buy your product unless it's refreshing.\n" +
+                "Your recipe per pitcher determines how refreshing it will be.\n" +
+                "You will need to determine how many lemons, and cups of sugar will be in each pitcher.\n" +
+                "You will then need to determine how many ice cubes are in each cup.\n" +
+                "Now that you have the basic gist of it, go get that money!\n" +
+                "Good luck!");
             PressEnterToContinue();
         }
         public static void Congratulate()
@@ -96,12 +93,13 @@ namespace LemonadeStand
         public static void ShowInventory(Player player)
         {
             Console.Clear();
-            Console.WriteLine("Inventory");
+            DisplayLemonadeStandName(player);
             Console.WriteLine("Lemons: " + player.inventory.lemons.Count());
             Console.WriteLine("Cups of Sugar: " + player.inventory.sugar.Count());
             Console.WriteLine("Ice Cubes: " + player.inventory.iceCubes.Count());
             Console.WriteLine("Cups: " + player.inventory.cups.Count());
             Console.WriteLine("Money: $" + player.wallet.money);
+            Console.WriteLine();
         }
         public static void DisplayNeedToGoToStore()
         {
@@ -109,21 +107,32 @@ namespace LemonadeStand
             PressEnterToContinue();
         }
 
-        public static void DisplayMainMenu(Day day, Weather weather)
+        public static void DisplayMainMenu(Day day, Weather weather, Player player)
         {
+            ShowInventory(player);
             DisplayDay(day, weather);
             Console.WriteLine();
             Console.WriteLine("What would you like to do before you open for the day?");
-            Console.WriteLine("Press 1 to view inventory.");
-            Console.WriteLine("Press 2 to go to the store.");
-            Console.WriteLine("Press 3 to set up and open for the day.");
+            Console.WriteLine("Press 1 to go to the store.");
+            Console.WriteLine("Press 2 to set up and open for the day.");
         }
 
-        public static void DisplayStoreMenu()
+        public static void DisplayStoreGreeting(Player player)
         {
+            ShowInventory(player);
             Console.WriteLine("Welcome to the store!");
-            Console.WriteLine("Press 1 to buy supplies");
-            Console.WriteLine("Press 2 to leave store.");
+        }
+        public static void DisplayItemsToBuy()
+        {
+            Console.WriteLine("Press 1 to buy lemons.");
+            Console.WriteLine("Press 2 to buy sugar.");
+            Console.WriteLine("Press 3 to buy ice cubes.");
+            Console.WriteLine("Press 4 to buy cups.");
+            Console.WriteLine("Press 5 to exit.");
+        }
+        public static void DisplayLemonadeStandName(Player player)
+        {
+            Console.WriteLine(player.name + "'s World Famous Lemonade");
         }
 
     }

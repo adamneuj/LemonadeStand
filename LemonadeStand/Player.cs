@@ -27,7 +27,17 @@ namespace LemonadeStand
         {
             Messages.AskName();
             name = Console.ReadLine();
-            Console.Clear();
+            if (String.IsNullOrWhiteSpace(name))
+            {
+                Messages.DisplayInvalidInput();
+                Console.Clear();
+                NameYourPlayer();
+            }
+            else
+            {
+                Console.Clear();
+            }
+
         }
     }
 }

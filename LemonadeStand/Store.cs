@@ -27,64 +27,48 @@ namespace LemonadeStand
             cup = new Cup();
         }
         //member methods
-        public Player EnterStore(Player player)
+        public Player BuyFromStore(Player player)
         {
             Messages.ClearConsole();
-            Messages.DisplayStoreMenu();
+            Messages.DisplayStoreGreeting(player);
+            Messages.DisplayItemsToBuy();
             storeInput = Console.ReadLine();
-            if(storeInput == "1")
+            storeInput = storeInput.ToLower();
+            if (storeInput == "1")
             {
-                storeInput = null;
-                Messages.ClearConsole();
-                return BuyFromStore(player);
+                BuyLemons(player);
+                return player;
             }
             else if(storeInput == "2")
             {
-                storeInput = null;
-                Messages.ClearConsole();
+                BuySugar(player);
+                return player;
+            }
+            else if(storeInput == "3")
+            {
+                BuyIce(player);
+                return player;
+            }
+            else if(storeInput == "4")
+            {
+                BuyCups(player);
+                return player;
+            }
+            else if(storeInput == "5")
+            {
                 return player;
             }
             else
             {
                 Messages.DisplayInvalidInput();
-                return EnterStore(player);
-            }
-        }
-        public Player BuyFromStore(Player player)
-        {
-            Messages.ShowInventory(player);
-            Console.WriteLine();
-            Console.WriteLine("Would you like to buy lemons, sugar, ice cubes, or cups?");
-            storeInput = Console.ReadLine();
-            storeInput = storeInput.ToLower();
-            if (storeInput == "lemons")
-            {
-                BuyLemons(player);
-                return player;
-            }
-            else if(storeInput == "sugar")
-            {
-                BuySugar(player);
-                return player;
-            }
-            else if(storeInput == "ice" || storeInput == "ice cubes")
-            {
-                BuyIce(player);
-                return player;
-            }
-            else if(storeInput == "cups" || storeInput == "cup")
-            {
-                BuyCups(player);
-                return player;
-            }
-            else
-            {
                 return player;
             }
         }
 
         public Player BuyLemons(Player player)
         {
+            Console.Clear();
+            Messages.ShowInventory(player);
             Messages.DisplayLemonPrice(lemon);
             Console.WriteLine("How many lemons would you like to buy?");
             storeInput = Console.ReadLine();
@@ -118,6 +102,8 @@ namespace LemonadeStand
 
         public Player BuySugar(Player player)
         {
+            Console.Clear();
+            Messages.ShowInventory(player);
             Messages.DisplaySugarPrice(sugar);
             Console.WriteLine("How many cups of sugar would you like to buy?");
             storeInput = Console.ReadLine();
@@ -151,6 +137,8 @@ namespace LemonadeStand
 
         public Player BuyIce(Player player)
         {
+            Console.Clear();
+            Messages.ShowInventory(player);
             Messages.DisplayIcePrice(iceCube);
             Console.WriteLine("How many ice cubes would you like to buy?");
             storeInput = Console.ReadLine();
@@ -184,6 +172,8 @@ namespace LemonadeStand
 
         public Player BuyCups(Player player)
         {
+            Console.Clear();
+            Messages.ShowInventory(player);
             Messages.DisplayCupPrice(cup);
             Console.WriteLine("How many cups would you like to buy?");
             storeInput = Console.ReadLine();
