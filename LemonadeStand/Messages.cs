@@ -101,12 +101,6 @@ namespace LemonadeStand
             Console.WriteLine("Money: $" + player.wallet.money);
             Console.WriteLine();
         }
-        public static void DisplayNeedToGoToStore()
-        {
-            Console.WriteLine("You will need to go to the store for more supplies.");
-            PressEnterToContinue();
-        }
-
         public static void DisplayMainMenu(Day day, Weather weather, Player player)
         {
             ShowInventory(player);
@@ -135,5 +129,14 @@ namespace LemonadeStand
             Console.WriteLine(player.name + "'s World Famous Lemonade");
         }
 
+        public static void DisplayDailyProfit(Player player)
+        {
+            Console.Clear();
+            ShowInventory(player);
+            Console.WriteLine("Profits for today: " + player.lemonadeStand.profit);
+            Console.WriteLine("Cups of lemonade sold: " + player.lemonadeStand.cupsSold);
+            Console.WriteLine("Number of people that passed your stand: " + player.lemonadeStand.footTraffic);
+            PressEnterToContinue();
+        }
     }
 }

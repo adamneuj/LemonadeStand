@@ -14,6 +14,7 @@ namespace LemonadeStand
         public int footTraffic;
         public List<Customer> passerbys;
         public double profit;
+        public int cupsSold;
         //constructor
 
         public LemonadeStand()
@@ -66,6 +67,8 @@ namespace LemonadeStand
                     passerbys[i].money -= pricePerCup;
                     profit += pricePerCup;
                     pitchers[0].cupsPerPitcher--;
+                    cupsSold++;
+                    footTraffic++;
                     if(pitchers[0].cupsPerPitcher == 0)
                     {
                         pitchers.RemoveAt(0);
@@ -78,13 +81,13 @@ namespace LemonadeStand
                 }
                 else
                 {
+                    footTraffic++;
                     continue;
                 }
             }
             pitchers.RemoveRange(0, pitchers.Count());
+            passerbys.RemoveRange(0, passerbys.Count());
             player.wallet.money += profit;
-            Console.WriteLine("Profits today: " + profit); // remove
-            Console.ReadLine();
             return player;
         }
     }

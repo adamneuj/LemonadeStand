@@ -24,6 +24,7 @@ namespace LemonadeStand
             {
                 Messages.ShowInventory(player);
                 Console.WriteLine();
+                ValidateInventory(day, weather, player, store);
                 Recipe recipe = new Recipe();
                 recipe.RemoveItemsFromInventory(player);
                 while (recipe.amountOfPitchers != 0)
@@ -38,6 +39,15 @@ namespace LemonadeStand
                 Messages.DisplayInvalidInput();
                 Console.Clear();
                 CallMenu(day, weather, player, store);
+            }
+        }
+        static void ValidateInventory(Day day, Weather weather, Player player, Store store)
+        {
+            if (player.inventory.lemons.Count() == 0 || player.inventory.sugar.Count() == 0 || player.inventory.iceCubes.Count() == 0 || player.inventory.cups.Count() == 0)
+            {
+                Console.WriteLine("You don't have enough inventory to open.  Please visit the store.");
+                Messages.PressEnterToContinue();
+                MainMenu.CallMenu(day, weather, player, store);
             }
         }
     }

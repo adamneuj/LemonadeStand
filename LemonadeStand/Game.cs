@@ -14,6 +14,7 @@ namespace LemonadeStand
         public Weather weather;
         public Day day;
         public Store store;
+        public bool loseCondition;
 
 
         //constructor
@@ -44,14 +45,35 @@ namespace LemonadeStand
                 GenerateTraffic(weather, player);
                 player.lemonadeStand.ServeCustomers(player);
                 Console.Clear();
+                Messages.DisplayDailyProfit(player);
                 day.CycleDay();
                 gameLength--;
+                CheckLoseCondition(player);
+            }
+            if (loseCondition)
+            {
+                Console.WriteLine("I'm sorry " + player.name + "your lemonade stand has closed shop for good.\n" +
+                    "Better luck next time.");
+            }
+            else
+            {
+
             }
         }
         public void GenerateTraffic(Weather weather, Player player)
         {
             player.lemonadeStand.GenerateFootTraffic(weather);
             player.lemonadeStand.GeneratePasserbys(weather);
+        }
+
+        public void CheckLoseCondition(Player player)
+        {
+            if(player.wallet.money <= 0)
+            {
+                Console.Clear();
+                loseCondition = true;
+                gameLength = 0;
+            }
         }
     }
 }

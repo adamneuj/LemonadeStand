@@ -106,5 +106,14 @@ namespace LemonadeStand
             player.inventory.sugar.RemoveRange(0, counter);
             return player;
         }
+        //TODO FINISH VALIDATION
+        //void ValidatePitcher(Player player)
+        //{
+        //    if(amountOfPitchers >= 2 && player.inventory.lemons.Count() == 1)
+        //    {
+        //        Console.WriteLine("You can only make 1 pitcher of lemonade.");
+        //        AddPitchers(player);
+        //    }
+        //}
     }
 }

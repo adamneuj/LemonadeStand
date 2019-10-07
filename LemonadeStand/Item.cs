@@ -8,7 +8,6 @@ namespace LemonadeStand
 {
     abstract class Item
     {
-        public string name;
         public double price;
     }
 }
